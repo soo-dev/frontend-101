@@ -5,7 +5,7 @@
 // Javascript 엔진이 효율적으로 더 빠르게 자바스크립트를 분석할 수 있음
 'use strict';
 
-// 2. Variable
+// 2. Variable rw(read/write)
 // let (added in ES6)
 let globalName = 'global name';
 {
@@ -30,17 +30,24 @@ var age;
 // let names;
 // let은 에러남
 
-// 3. Constants
-// favor immutable data type always 
-// - security
-// - thread safety (한꺼번에 여러개의 쓰레드에 할당되면 좋지 않기 때문)
-// - reduce human mistakes
+// 3. Constant r(read Only)
+// use const whenever possible.
+// only use let if variable needs to change.
 const daysInWeek = 7;
 const maxNumber = 5;
 
 // 못바꿈 Error!
 // daysInWeek = 8;
 console.log(daysInWeek);
+
+// Note!
+// Immutable data types: primitive types, frozen objects (i.e. object.freeze())
+// -> data 자체 변경 불가
+// Mutable data types: all objects by default are mutable in JS
+// favor immutable data type always 
+// - security
+// - thread safety (한꺼번에 여러개의 쓰레드에 할당되면 좋지 않기 때문)
+// - reduce human mistakes
 
 // 4. Variable types
 // primitive, single item: number, string, boolean, null, undefined, symbol
