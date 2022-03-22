@@ -83,4 +83,51 @@ function upgradeUser(user) {
     // ...
 }
 
-// 
+// First-class function
+// functions are treated like any other variable
+// can be assigned as a value to variable
+// can be passed as an argument to other functions.
+// can be returned by another function
+
+// 1. Function expression
+// a function declaration can be called earlier than it is defined. (hoisted) 
+// a function expression is created when the execution reached it.
+const print = function () {
+    console.log('print');   // anonymous function
+}
+print();
+const printAgain = print;
+printAgain();
+const sumAgain = sum;
+console.log(sumAgain(1, 3));
+
+// 2. Callback functio using function expression
+function randomQuiz(answer, printYes, printNo) {
+    if(answer === 'love you') {
+        printYes();
+    } else {
+        printNo();
+    }
+}
+
+// Arrow function
+// always anonymous
+const simplePrint = () => console.log('simplePrint');
+
+const add = (a, b) => a + b;
+
+const simpleMiutiply = (a, b) => {
+    return a * b;
+};
+
+// IIFE
+// Immediately Invoked Function Expression
+(function hello() {
+    console.log('IIFE')
+})();
+
+// ===
+// function hello() {
+//     console.log('IIFE');
+// }
+// hello();
