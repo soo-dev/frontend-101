@@ -10,7 +10,7 @@
 class Person {
     // constructor
     constructor(name, age) {
-        //fields
+        // fields
         this.name = name;
         this.age = age;
     }
