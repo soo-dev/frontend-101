@@ -56,6 +56,41 @@ fruits.shift();
 fruits.shift();
 console.log(fruits) // (4) ["🍎", "🍌", "🍓", "🍋"]
 
+// splice: remove an otem by index porition
+fruits.push('🍆', '🫐', '🥭');
+console.log(fruits);    // (7) ["🍎", "🍌", "🍓", "🍋", "🍆", "🫐", "🥭"]
+// fruits.splice(3);       
+// console.log(fruits);    // (3) ["🍎", "🍌", "🍓"]
+fruits.splice(4, 1);    // index 4부터 1개만 지울거임 -> 4만 지울거임
+console.log(fruits);    // (6) ["🍎", "🍌", "🍓", "🍋", "🫐", "🥭"]
+fruits.splice(3, 1, '🍑', '🍒');    // index 3번 자리부터 1개만 지우고 그 자리에 '🍑', '🍒' 넣을거야 -> 레몬 지우고 그 자리에 '🍑', '🍒' 넣을거야
+console.log(fruits);    // (7) ["🍎", "🍌", "🍓", "🍑", "🍒", "🫐", "🥭"]
+
+// conbine two arrays
+const fruits2 = ['🍈', '🍇'];
+console.log(fruits2);   // (2) ["🍈", "🍇"]
+const newFruits = fruits.concat(fruits2);
+console.log(newFruits); // (9) ["🍎", "🍌", "🍓", "🍑", "🍒", "🫐", "🥭", "🍈", "🍇"]
+
+// 5. Searching
+// find the index
+console.clear();
+console.log(fruits);
+console.log(fruits.indexOf('🍎'));  // 0
+console.log(fruits.indexOf('🍋'));  // -1 === 없다!
+
+// includes
+console.log(fruits.includes('🍋')); // false
+console.log(fruits.includes('🫐')); // true
+
+// lastIndexOf
+console.clear();
+fruits.push('🍎');  
+console.log(fruits);    // (8) ["🍎", "🍌", "🍓", "🍑", "🍒", "🫐", "🥭", "🍎"]
+console.log(fruits.indexOf('🍎'));  // 0 앞쪽부터 찾아서 나오는 인덱스 출력
+console.log(fruits.lastIndexOf('🍎'));  // 7 뒤쪽부터 찾아서 나오는 인덱스 출력
+
+
 
 
 
