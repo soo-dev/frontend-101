@@ -4,6 +4,8 @@
 // Nearly all objects in JavaScript are instances of Object
 // object = { key : value };
 
+'use strict';
+
 // ---------------------------------------------------------------------------------------------
 
 // 1. Literals and properties
@@ -91,7 +93,7 @@ const array = [1, 2, 4, 5];
 // }
 // 1 2 4 5
 
-for(value of array) {
+for(let value of array) {
     console.log(value);
 }   // 1 2 4 5
 
